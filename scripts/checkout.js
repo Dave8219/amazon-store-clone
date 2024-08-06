@@ -110,3 +110,11 @@ link.addEventListener('click', () => {
 });
 });
 
+
+
+let quantity = 0;
+    cart.forEach((cartItem) => {
+    quantity += cartItem.quantity;
+    });
+    document.querySelector('.js-checkout-cart-quantity').innerHTML = `${quantity} Items`;
+
