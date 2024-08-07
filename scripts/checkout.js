@@ -104,6 +104,8 @@ document.querySelectorAll('.js-delete-link').forEach((link) => {
 link.addEventListener('click', () => {
     const productId = link.dataset.productId;
     removeFromCart(productId);
+    updateCartQuantity();
+    
 
    const container = document.querySelector(`.js-cart-item-container-${productId}`);
    container.remove();
@@ -111,10 +113,12 @@ link.addEventListener('click', () => {
 });
 
 
-
+function updateCartQuantity() {
 let quantity = 0;
     cart.forEach((cartItem) => {
     quantity += cartItem.quantity;
     });
-    document.querySelector('.js-checkout-cart-quantity').innerHTML = `${quantity} Items`;
+    document.querySelector('.js-checkout-cart-quantity-header').innerHTML = `${quantity} Items`;  
+}
 
+updateCartQuantity();
