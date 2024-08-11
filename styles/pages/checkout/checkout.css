@@ -120,6 +120,25 @@
 }
 
 
+.quantity-label {
+display: initial;
+}
+
+.is-editing-quantity .quantity-label {
+    display: none;
+}
+
+
+.update-quantity-link {
+display: initial;
+}
+
+
+.is-editing-quantity .update-quantity-link {
+    display: none;
+}
+
+
 .quantity-input {
     width: 30px;
     display: none;
