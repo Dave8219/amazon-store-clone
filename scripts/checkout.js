@@ -1,4 +1,10 @@
-import {cart, removeFromCart, calculateCartQuantity} from '../data/cart.js';
+import {
+    cart, 
+    removeFromCart, 
+    calculateCartQuantity, 
+    updateQuantity 
+    } 
+    from '../data/cart.js';
 import {products} from '../data/products.js';
 import {formatCurrency} from './utils/money.js';
 
@@ -37,7 +43,7 @@ js-cart-item-container-${matchingProduct.id}">
         </div>
         <div class="product-quantity">
             <span>
-            Quantity: <span class="quantity-label">${cartItem.quantity}</span>
+            Quantity: <span class="quantity-label js-quantity-label">${cartItem.quantity}</span>
             </span>
             <span class="update-quantity-link link-primary js-update-link" data-product-id="${matchingProduct.id}">
             Update
@@ -122,7 +128,6 @@ function updateCartQuantity() {
     document.querySelector('.js-checkout-cart-quantity-header').innerHTML = `${cartQuantity} Items`;  
 }
 
-
 updateCartQuantity();
 
 
@@ -138,18 +143,32 @@ link.addEventListener('click', () => {
 });
 
 
+
 document.querySelectorAll('.js-save-link').forEach((link) => {
 link.addEventListener('click', () => {
 const productId = link.dataset.productId;
-
+const saveQuantity = () => {
     const container = document.querySelector(`.js-cart-item-container-${productId}`);
     container.classList.remove('is-editing-quantity');
 
-
     const quantityInput = document.querySelector(`.js-quantity-input-${productId}`);
+    
     const newQuantity = Number(quantityInput.value);
+   updateQuantity(productId, newQuantity);
+
+   const quantityLabel = container.querySelector('.js-quantity-label');
+   quantityLabel.textContent = newQuantity;
+   updateCartQuantity();
+
+};
+link.addEventListener('click', saveQuantity);
+const quantityInput = document.querySelector(`.js-quantity-input-${productId}`);
+    quantityInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            saveQuantity();
+        }
 
 });
 }); 
-
+});
 
