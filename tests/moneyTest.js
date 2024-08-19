@@ -37,3 +37,4 @@ else {
 }
 
 console.log('test suite: calculateTax');
+
