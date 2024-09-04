@@ -1,0 +1,173 @@
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 1px;
+    border-color: #111;
+
+  }
+
+  .header {
+    display: flex;
+    width: 175px;
+    padding-bottom: 6px;
+  }
+
+
+  .image-logo {
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.search-bar {
+    width: 250px;
+    height: 30px;
+    border: solid 1px;
+    border-color: rgb(208, 202, 202);
+    border-radius: 2px;
+    padding-left: 2px;
+    
+}
+
+.search-bar:focus {
+    border-color: rgb(118, 109, 92); /* New border color on focus */
+    color: rgb(118, 109, 92); /* New text color on focus */
+    outline: none; /* Remove default outline */
+}
+
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+
+
+  .navbar {
+    display: flex;
+    height: 50px;
+    width: 400px;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    
+    background-color: #ffffff;
+    
+}
+
+.navbar > li {
+    float: left;
+}
+
+.navbar > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+
+.navbar > li > a:hover {
+    background-color: #111;
+    
+
+}
+
+
+li {
+    cursor: pointer;
+}
+
+
+
+
+ .services-text {
+    color: black;
+
+ }
+
+
+
+
+/* Dropdown container */ 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    color: rgba(208, 208, 217, 0.93);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #514e4e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(242, 241, 241, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+
+
+.dropdown-content a:hover {
+    background-color: #5b5757;
+    
+    
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover  .dropdown-content {
+    display: block;
+    background-color: rgb(188, 179, 179);
+
+}
+
+
+
+.dropdown:hover .dropbtn {
+    background-color: #b8b4b4;
+    
+}
+
+
+
+.cart-image-container {
+    display: flex;
+    object-fit: contain;
+}
+
+
+.cart-image {
+    width: 40px;
+
+}
+
+
+.cart-text {
+    padding-right: 10px;
+}
+
+.cart-quantity {
+    padding-right: 2px;
+}
+
+
