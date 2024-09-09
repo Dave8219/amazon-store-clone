@@ -27,6 +27,10 @@ beforeEach(() => {
     renderOrderSummary();
 });
 
+afterEach(() => {
+    document.querySelector('.js-test-container').innerHTML = '';
+});
+
 
 it('displays the cart', () => {
     
@@ -38,17 +42,27 @@ expect(
 
     expect(
         document.querySelector(`.js-product-quantity-${productId2}`).innerText).toContain('Quantity: 1');
-    
-        document.querySelector('.js-test-container').innerHTML = '';
+
+        expect(
+            document.querySelector(`.js-product-name-${productId1}`).innerText).toEqual('Black and Gray Athletic Cotton Socks - 6 Pairs');
+
+            expect(
+                document.querySelector(`.js-product-name-${productId2}`).innerText).toEqual('Intermediate Size Basketball');
+
+                expect(document.querySelector(`.js-product-price-${productId1}`).innerText).toContain('$10.90');
+
+                expect(document.querySelector(`.js-product-price-${productId2}`).innerText).toContain('$20.95');
 });
+
+
 
 it('removes a product', () => {
 
+    
 document.querySelector(`.js-delete-link-${productId1}`).click();
 expect(
     document.querySelectorAll('.js-cart-item-container').length
 ).toEqual(1);
-
 
 //null because this product has been deleted
 expect(document.querySelector(`.js-cart-item-container-${productId1}`)).toEqual(null);
@@ -56,10 +70,14 @@ expect(document.querySelector(`.js-cart-item-container-${productId1}`)).toEqual(
 //it is not null or still in the cart because this product was not deleted
 expect(document.querySelector(`.js-cart-item-container-${productId2}`)).not.toEqual(null);
 
+//this test confirms that productId2 is still in the cart with its name being displayed correctly
+expect(document.querySelector(`.js-product-name-${productId2}`).innerText).toEqual('Intermediate Size Basketball');
+//this test checks the price of the product still in the cart is being displayed correctly
+expect(document.querySelector(`.js-product-price-${productId2}`).innerText).toContain('$20.95');
+
 //once we click delete, the cart array is also correct
 expect(cart.length).toEqual(1);
 expect(cart[0].productId).toEqual(productId2);
 
-document.querySelector('.js-test-container').innerHTML = '';
 });
 });
