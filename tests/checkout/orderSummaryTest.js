@@ -58,7 +58,6 @@ expect(
 
 it('removes a product', () => {
 
-    
 document.querySelector(`.js-delete-link-${productId1}`).click();
 expect(
     document.querySelectorAll('.js-cart-item-container').length

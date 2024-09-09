@@ -1,4 +1,4 @@
-import {addToCart, cart, loadFromStorage} from "../../data/cart.js";
+import {addToCart, cart, loadFromStorage, removeFromCart} from "../../data/cart.js";
 
 
 
@@ -58,5 +58,49 @@ expect(localStorage.setItem).toHaveBeenCalledWith('cart', JSON.stringify([{
 expect(cart[0].productId).toEqual('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
 //this test ensures that the added product has a quantity of 1
 expect(cart[0].quantity).toEqual(1);
+});
+});
+
+
+
+
+
+describe('test suite: remove from cart', () => {
+    beforeEach(() => {
+spyOn(localStorage, 'setItem');
+    });
+it('removes a product from the cart', () => {
+spyOn(localStorage, 'getItem').and.callFake(() => {
+    return JSON.stringify([{
+        productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+        quantity: 1,
+        deliveryOptionId: '1'
+    }]);
+});
+loadFromStorage();
+removeFromCart('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
+expect(localStorage.setItem).toHaveBeenCalledTimes(1);
+expect(localStorage.setItem).toHaveBeenCalledWith('cart', JSON.stringify([]));
+expect(cart.length).toEqual(0);
+});
+
+it('it does nothing if no product is in the cart', () => {
+spyOn(localStorage, 'getItem').and.callFake(() => {
+return JSON.stringify([{
+    productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+    quantity: 1,
+    deliveryOptionId: '1'
+}]);
+});
+loadFromStorage();
+//used an escape character \ to use the apostrophe in a string
+removeFromCart('1 won\'t work productId is not in the cart');
+expect(cart.length).toEqual(1);
+expect(cart[0].productId).toEqual('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
+expect(cart[0].quantity).toEqual(1);
+expect(localStorage.setItem).toHaveBeenCalledTimes(1);
+expect(localStorage.setItem).toHaveBeenCalledWith('cart', JSON.stringify([{productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+    quantity: 1,
+    deliveryOptionId: '1'}]));
 });
 });
