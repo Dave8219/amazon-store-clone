@@ -48,5 +48,6 @@ button {
     border: solid 1px rgb(118, 109, 92);
     box-sizing: border-box;
     line-height: 1.5;
+    cursor: pointer;
 
 }

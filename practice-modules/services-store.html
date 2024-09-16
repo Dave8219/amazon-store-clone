@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Services Store Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #fc9d06;
+            padding-top: 15px;
+            padding-bottom: 100px;
+            height: 2000px;
+        }
+p {
+    padding-bottom: 20px;
+}
+        
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cover {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    column-gap: 10px;
+    padding-top: 40px;
+
+}
+
+
+.intro-info {
+    display: flex;
+    flex-direction: column;
+    background-color: #fc9d06;
+    border-radius: 4px;
+    padding: 4px 8px 10px 8px;
+    border-right: solid 1px rgb(200, 199, 197);
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+
+.cover-image {
+display: flex;
+padding-right: 30px;
+}
+
+.sales-rep {
+width: 100%;
+height: 500px;
+border-radius: 4px;
+object-fit: contain;
+}
+
+
+button {
+    width: 150px;
+    margin-top: 30px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 4px;
+    background-color: #1e3a5f;
+    border: solid 1px rgb(118, 109, 92);
+    box-sizing: border-box;
+    line-height: 1.5;
+    color: white;
+    cursor: pointer;
+
+}
+
+
+.grid-services {
+display: grid;
+grid-template-columns: 2fr 2fr 2fr;
+padding: 50px 6px 10px 6px;
+column-gap: 6px;
+row-gap: 6px;
+}
+
+.boxes {
+    border: solid 1px rgb(78, 77, 77);
+    border-radius: 8px;
+    display: flex;
+    height: 300px;
+    padding: 6px;
+    overflow: hidden;
+    
+}
+
+.services-title {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+
+.label-input {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+
+.footer-design {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 10px;
+}
+
+
+.footer-menu, .image-logo-footer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+
+
+.decorative-line {
+    border: none;
+    height: 4px;
+    background-color: #ff6600; /* Set the color of the line */
+    margin: 20px 0; /* Add space above and below */
+    width: 25%; /* Adjust the width of the line */
+}
+
+
+
+    </style>
+    <link rel="stylesheet" href="header-services.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="header">
+            <a href="practice-store.html">
+                <img class="image-logo" src="images/amazon-logo.png">
+            </a>
+        </div>
+    <div class="search-bar-container">
+<input class="search-bar" type="text" placeholder="Search">
+</div>
+<div class="nav-menu">
+    <ul class="navbar">
+<li>Home</li>
+<li>About</li>
+<li class="dropdown">
+    <a href="#" class="dropbtn"><span class="services-text">Services</span></a>
+    <div class="dropdown-content">
+        <a href="#">Web Design</a>
+        <a href="#">SEO</a>
+        <a href="#">Marketing</a>
+    </div></li>
+<li>Contact</li>
+<div class="cart-image-container"><li>
+    <img class="cart-image" src="images/cart.png">
+</li></div>
+    </ul>
+    <div class="cart-quantity js-cart-quantity"></div>
+    <div class="cart-text">Cart</div>
+    </div>
+</header>
+
+
+    <main>    
+        <div class="cover">
+        <div class="intro-info">
+            <h2>Welcome!</h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, ligula ac sodales elementum, orci odio consectetur sapien, eget facilisis ligula sem vel sapien. Quisque fermentum, elit vel malesuada tristique, odio eros suscipit neque, at lobortis dui quam ut odio. Sed ac hendrerit elit. Maecenas sed odio vitae libero suscipit condimentum. Nullam at bibendum purus. Suspendisse potenti. Etiam eget sagittis lectus. Vivamus sed urna non augue sollicitudin commodo ac vel sem.
+            </p>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, ligula ac sodales elementum, orci odio consectetur sapien, eget facilisis ligula sem vel sapien. Quisque fermentum, elit vel malesuada tristique, odio eros suscipit neque, at lobortis dui quam ut odio. Sed ac hendrerit elit. Maecenas sed odio vitae libero suscipit condimentum. Nullam at bibendum purus. Suspendisse potenti. Etiam eget sagittis lectus. Vivamus sed urna non augue sollicitudin commodo ac vel sem.
+            </p>
+            <a href="#subscribe-label"><button>Learn More</button></a>
+        </div>
+        
+        <div class="cover-image">
+            <img class="sales-rep" src="images/sales-rep.png">
+        </div>
+    </div>
+        
+
+    <div class="services-title" id="services-label"><h1>Services</h1></div>
+<section class="grid-services">
+<div class="boxes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, ligula ac sodales elementum, orci odio consectetur sapien, eget facilisis ligula sem vel sapien. Quisque fermentum, elit vel malesuada tristique, odio eros suscipit neque, at lobortis dui quam ut odio. Sed ac hendrerit elit. Maecenas sed odio vitae libero suscipit condimentum. Nullam at bibendum purus. Suspendisse potenti. Etiam eget sagittis lectus. Vivamus sed urna non augue sollicitudin commodo ac vel sem.</div>
+<div class="boxes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, ligula ac sodales elementum, orci odio consectetur sapien, eget facilisis ligula sem vel sapien. Quisque fermentum, elit vel malesuada tristique, odio eros suscipit neque, at lobortis dui quam ut odio. Sed ac hendrerit elit. Maecenas sed odio vitae libero suscipit condimentum. Nullam at bibendum purus. Suspendisse potenti. Etiam eget sagittis lectus. Vivamus sed urna non augue sollicitudin commodo ac vel sem.</div>
+<div class="boxes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, ligula ac sodales elementum, orci odio consectetur sapien, eget facilisis ligula sem vel sapien. Quisque fermentum, elit vel malesuada tristique, odio eros suscipit neque, at lobortis dui quam ut odio. Sed ac hendrerit elit. Maecenas sed odio vitae libero suscipit condimentum. Nullam at bibendum purus. Suspendisse potenti. Etiam eget sagittis lectus. Vivamus sed urna non augue sollicitudin commodo ac vel sem.</div>
+
+
+<div class="boxes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, ligula ac sodales elementum, orci odio consectetur sapien, eget facilisis ligula sem vel sapien. Quisque fermentum, elit vel malesuada tristique, odio eros suscipit neque, at lobortis dui quam ut odio. Sed ac hendrerit elit. Maecenas sed odio vitae libero suscipit condimentum. Nullam at bibendum purus. Suspendisse potenti. Etiam eget sagittis lectus. Vivamus sed urna non augue sollicitudin commodo ac vel sem.</div>
+<div class="boxes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, ligula ac sodales elementum, orci odio consectetur sapien, eget facilisis ligula sem vel sapien. Quisque fermentum, elit vel malesuada tristique, odio eros suscipit neque, at lobortis dui quam ut odio. Sed ac hendrerit elit. Maecenas sed odio vitae libero suscipit condimentum. Nullam at bibendum purus. Suspendisse potenti. Etiam eget sagittis lectus. Vivamus sed urna non augue sollicitudin commodo ac vel sem.</div>
+<div class="boxes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, ligula ac sodales elementum, orci odio consectetur sapien, eget facilisis ligula sem vel sapien. Quisque fermentum, elit vel malesuada tristique, odio eros suscipit neque, at lobortis dui quam ut odio. Sed ac hendrerit elit. Maecenas sed odio vitae libero suscipit condimentum. Nullam at bibendum purus. Suspendisse potenti. Etiam eget sagittis lectus. Vivamus sed urna non augue sollicitudin commodo ac vel sem.</div>
+</section>
+   
+
+
+<div>
+    <label class="label-input" id="subscribe-label">Subscribe</label>
+    <div>
+        <input type="text" name="Name" placeholder="Enter Name">
+        </div>
+    <input type="email" name="email" placeholder="Email Address"> 
+</div>
+</main>
+
+
+<hr class="decorative-line">
+
+
+
+
+<footer class="footer-design">
+<ul class="footer-menu">
+<li>Home</li>
+<li>About
+</li>
+<li>Services</li>
+<li>Contact</li>
+<li>Privacy Policy</li>
+</ul>
+<div class="image-logo-footer">
+    <h1>Image Logo</h1>
+</div>
+
+<div>
+    <h1>Other Stuff</h1>
+</div>
+</footer>
+
+
+    <script></script>
+</body>
+
+</html>
+
+
