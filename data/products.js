@@ -59,9 +59,19 @@ return `
 }
 }
 
+/* this gives us undefined because there is no object for this to point to - we are not inside an object
+console.log(this);
+const obejct2 = {
+a: 2,
+b: this.a
+};
+*/
 
-
-
+/*
+const date = new Date();
+console.log(date);
+console.log(date.toLocaleTimeString());
+*/
 
 /*created an instance to test out the class in the console
 const product1 = new Product(
@@ -82,6 +92,23 @@ const product1 = new Product(
       }
 );
 console.log(product1);
+*/
+
+
+/*
+function logThis() {
+    console.log(this);
+}
+logThis();
+logThis.call('hello');
+
+this
+const object3 = {
+method: () => {
+    console.log(this);
+}
+};
+object3.method();
 */
 
 
