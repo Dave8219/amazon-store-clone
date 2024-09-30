@@ -1,10 +1,11 @@
-import {products} from "./data-products.js";
+import {products, formatCurrency} from "./data-products.js";
 import {cart, addToCart, calculateCartQuantity, saveToStorage} from "./data-cart.js";
 
 
 let productsHTML = '';
 
 products.forEach((product) => {
+    
     productsHTML += 
     `
     <div class="product-container">
@@ -26,11 +27,11 @@ products.forEach((product) => {
                 </div>
       
                 <div class="product-price">
-                
+                $${formatCurrency(product.priceCents)}
                 </div>
       
                 <div class="product-quantity-container">
-                  <select>
+                  <select class="js-quantity-selector-${product.id}">
                     <option selected value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -82,8 +83,7 @@ products.forEach((product) => {
                 addToCart(productId);
                 updateCartQuantity();
                 saveToStorage();
-                
-                
+                        
         });
         });
 

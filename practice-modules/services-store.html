@@ -4,11 +4,11 @@
     <title>Services Store Practice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
+        body, html {
             background-color: #fc9d06;
             padding-top: 15px;
-            padding-bottom: 100px;
-            height: 2000px;
+            height: 100%;
+            width: 100%;
         }
 p {
     padding-bottom: 20px;
@@ -56,34 +56,40 @@ object-fit: contain;
 
 button {
     width: 150px;
+    font-size: 18px;
     margin-top: 30px;
     padding-top: 4px;
     padding-bottom: 4px;
     border-radius: 4px;
-    background-color: #1e3a5f;
+    background-color: rgb(30, 58, 95);
     border: solid 1px rgb(118, 109, 92);
     box-sizing: border-box;
-    line-height: 1.5;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    line-height: 2.5;
     color: white;
     cursor: pointer;
+}
 
+
+.learn-more-button {
+   margin-left: 20px;
 }
 
 
 .grid-services {
 display: grid;
 grid-template-columns: 2fr 2fr 2fr;
-padding: 50px 6px 10px 6px;
-column-gap: 6px;
-row-gap: 6px;
+padding: 50px 10px 10px 10px;
+column-gap: 8px;
+row-gap: 8px;
 }
 
 .boxes {
     border: solid 1px rgb(78, 77, 77);
     border-radius: 8px;
     display: flex;
-    height: 300px;
-    padding: 6px;
+    height: 250px;
+    padding: 8px;
     overflow: hidden;
     
 }
@@ -98,6 +104,74 @@ row-gap: 6px;
 .label-input {
     font-size: 40px;
     font-weight: 800;
+    
+}
+
+.heading-subscribe {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px 20px 0px;
+    justify-content: center;
+}
+
+
+.subscribe-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+@media (max-width: 2000px) {
+.subscribe-container {
+grid-template-columns: repeat(4, 1fr);
+}
+}
+
+
+@media (max-width: 875px) {
+    .subscribe-container {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+.first-column {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 400px;
+row-gap: 15px;
+padding: 0px 70px 0px 70;
+}
+
+
+.second-column {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 400px;
+row-gap: 15px;
+padding: 0px 70px 0px 70;
+}
+
+
+.input-search {
+display: flex;
+width: 100%;
+height: 40px;
+padding-left: 8px;
+
 }
 
 
@@ -108,10 +182,35 @@ row-gap: 6px;
 }
 
 
-.footer-menu, .image-logo-footer {
+.footer-menu {
     display: flex;
     flex: 1;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.image-logo-footer {
+display: flex;
+flex-direction: column;
+flex: 1;
+}
+
+
+.my-image-logo {
+width: 100%;
+object-fit: contain;
+height: 150px;
+
+
+}
+
+.other-stuff {
+display: flex;
+flex: 1;
+align-items: top;
+justify-content: center;
 }
 
 
@@ -124,6 +223,118 @@ row-gap: 6px;
     width: 25%; /* Adjust the width of the line */
 }
 
+
+
+
+.wave-container {
+  display: flex;
+  position: relative;
+  background-color: rgb(30, 58, 95); /* Background color of the container */
+  height: 400px;
+  width: 100%; /* Full width of the container */
+  overflow: hidden;
+}
+
+
+@media (max-width: 940px) {
+.wave-container {
+    height: auto;
+    max-height: 450px;
+}
+}
+
+
+@media (max-width: 750px) {
+.wave-container {
+    height: auto;
+    max-height: 500px;
+}
+}
+
+@media (max-width: 630px) {
+.wave-container {
+    height: auto;
+    max-height: 600px;
+}
+}
+
+
+@media (max-width: 450px) {
+.wave-container {
+    height: auto;
+}
+}
+
+
+
+
+.wave-container::before, .wave-container::after, .wave-layer2, .wave-layer3 {
+    display: flex;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure it covers the full width */
+  height: 150px; /* Adjust height */
+  background-size: cover; /* Cover the full width */
+  background-repeat: no-repeat; /* No repeat for waves */
+}
+
+.wave-container::before {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="%23ffffff" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,96C384,75,480,53,576,48C672,43,768,53,864,69.3C960,85,1056,107,1152,128C1248,149,1344,171,1392,181.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>') no-repeat;
+  z-index: 4;
+}
+
+.wave-container::after {
+  top: 20px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="%23d1f7ff" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,234.7C384,235,480,181,576,160C672,139,768,149,864,160C960,171,1056,181,1152,186.7C1248,192,1344,192,1392,192L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>') no-repeat;
+  z-index: 3;
+}
+
+.wave-layer2 {
+  top: 40px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="%2300bfff" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,197.3C384,213,480,203,576,192C672,181,768,171,864,149.3C960,128,1056,96,1152,96C1248,96,1344,128,1392,149.3L1440,171L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>') no-repeat;
+  z-index: 2;
+}
+
+.wave-layer3 {
+  top: 60px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="%230084ff" fill-opacity="1" d="M0,64L48,90.7C96,117,192,171,288,186.7C384,203,480,181,576,154.7C672,128,768,96,864,117.3C960,139,1056,213,1152,224C1248,235,1344,181,1392,149.3L1440,117L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>') no-repeat;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 5; /* Content stays above the waves */
+  padding: 150px;
+  color: white;
+  text-align: center;
+}
+
+
+
+@media (max-width: 2000px) {
+.content {
+    font-size: 16px;
+}
+}
+
+
+@media (max-width: 500px) {
+.content {
+    font-size: 14px;
+}
+}
+
+@media (max-width: 500px) {
+.click-here-button {
+width: 150px;
+font-size: 12px;
+}
+}
 
 
     </style>
@@ -171,11 +382,11 @@ row-gap: 6px;
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, ligula ac sodales elementum, orci odio consectetur sapien, eget facilisis ligula sem vel sapien. Quisque fermentum, elit vel malesuada tristique, odio eros suscipit neque, at lobortis dui quam ut odio. Sed ac hendrerit elit. Maecenas sed odio vitae libero suscipit condimentum. Nullam at bibendum purus. Suspendisse potenti. Etiam eget sagittis lectus. Vivamus sed urna non augue sollicitudin commodo ac vel sem.
             </p>
-            <a href="#subscribe-label"><button>Learn More</button></a>
+            <a href="#subscribe-label"><button class="learn-more-button">Learn More</button></a>
         </div>
         
         <div class="cover-image">
-            <img class="sales-rep" src="images/sales-rep.png">
+            <img class="sales-rep" src="images/sales.png">
         </div>
     </div>
         
@@ -194,13 +405,32 @@ row-gap: 6px;
    
 
 
-<div>
-    <label class="label-input" id="subscribe-label">Subscribe</label>
-    <div>
-        <input type="text" name="Name" placeholder="Enter Name">
-        </div>
-    <input type="email" name="email" placeholder="Email Address"> 
-</div>
+<div class="wave-container">
+    <div class="content">
+      <h1>Ocean Waves</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, ligula ac sodales elementum, orci odio consectetur sapien, eget facilisis ligula sem vel sapien. Quisque fermentum, elit vel malesuada tristique, odio eros suscipit neque, at lobortis dui quam ut odio. Sed ac hendrerit elit. Maecenas sed odio vitae libero suscipit condimentum. Nullam at bibendum purus. Suspendisse potenti. Etiam eget sagittis lectus. Vivamus sed urna non augue sollicitudin commodo ac vel sem.</p>
+      <button class="click-here-button">Click Here</button>
+    </div>
+  </div>
+  
+  
+  <div class="heading-subscribe"><label class="label-input" id="subscribe-label">Subscribe</label></div>
+  
+<div class="subscribe-container">
+    <div></div>
+    <div class="first-column">
+    <input class="input-search" type="text" name="Name" placeholder="Enter Name">
+    <input class="input-search" type="email" name="email" placeholder="Email Address">
+    <input class="input-search" type="text" name="address" placeholder="Address">
+    </div>
+   
+   <div class="second-column">
+   <input class="input-search" type="phone" name="phone" placeholder="Phone"> 
+<input class="input-search" type="text" name="message" placeholder="Message">
+<input class="input-search" type="other" name="other" placeholder="Other">
+    </div>
+    <div></div>
+ </div>
 </main>
 
 
@@ -219,10 +449,10 @@ row-gap: 6px;
 <li>Privacy Policy</li>
 </ul>
 <div class="image-logo-footer">
-    <h1>Image Logo</h1>
+    <image class="my-image-logo" src="images/my-logo.png">
 </div>
 
-<div>
+<div class="other-stuff">
     <h1>Other Stuff</h1>
 </div>
 </footer>
