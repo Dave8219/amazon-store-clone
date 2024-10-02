@@ -13,7 +13,7 @@ export function getProduct(productId) {
 }
 
 
-class Product {
+export class Product {
     id;
     image;
     name;
@@ -41,7 +41,7 @@ return '';
 }
 
 
-class Clothing extends Product {
+export class Clothing extends Product {
     sizeChartLink;
 
     constructor(productDetails) {
@@ -60,7 +60,7 @@ return `
 }
 
 
-class Appliance extends Product {
+export class Appliance extends Product {
     instructionsLink;
     warrantyLink;
 
@@ -69,8 +69,6 @@ super(productDetails);
 this.instructionsLink = productDetails.instructionsLink;
 this.warrantyLink = productDetails.warrantyLink;
     }
-
-
 extraInfoHTML() {
     return `
     <a href="${this.instructionsLink}" target="_blank">
