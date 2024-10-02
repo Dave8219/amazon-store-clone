@@ -59,6 +59,30 @@ return `
 }
 }
 
+
+class Appliance extends Product {
+    instructionsLink;
+    warrantyLink;
+
+    constructor(productDetails) {
+super(productDetails);
+this.instructionsLink = productDetails.instructionsLink;
+this.warrantyLink = productDetails.warrantyLink;
+    }
+
+
+extraInfoHTML() {
+    return `
+    <a href="${this.instructionsLink}" target="_blank">
+    Instructions
+    </a>
+    <a href="${this.warrantyLink}" target="_blank">
+    Warranty
+    </a>
+    `;
+}
+}
+
 /* this gives us undefined because there is no object for this to point to - we are not inside an object
 console.log(this);
 const obejct2 = {
@@ -123,6 +147,11 @@ return response.json();
             if (productDetails.type === 'clothing') {
         return new Clothing(productDetails);
             }
+            //my addition
+            else if (productDetails.type === 'appliance') {
+            return new Appliance(productDetails);
+            }
+            //
         return new Product(productDetails);
         });
         console.log('load products');
@@ -130,11 +159,14 @@ return response.json();
     return promise;
 }
 
+
+
 /*
 loadProductsFetch().then(() => {
     console.log('next step');
 });
 */
+
 
 
 
@@ -146,6 +178,11 @@ xhr.addEventListener('load', () => {
     if (productDetails.type === 'clothing') {
 return new Clothing(productDetails);
     }
+    //my addition
+    else if (productDetails.type === 'appliance') {
+        return new Appliance(productDetails);
+        }
+    //    
 return new Product(productDetails);
 });
 console.log('load products');
@@ -159,8 +196,8 @@ fun();
 
 
 
-/*collapsed array of products objects data
-export const products = [
+//collapsed array of products objects data
+/*export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
@@ -220,7 +257,10 @@ export const products = [
       "toaster",
       "kitchen",
       "appliances"
-    ]
+    ],
+    type: "appliance",
+    instructionsLink: "images/appliance-instructions.png",
+    warrantyLink: "images/appliance-warranty.png"
   },
   {
     id: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
@@ -823,6 +863,10 @@ export const products = [
     if (productDetails.type === 'clothing') {
 return new Clothing(productDetails);
     }
+
+else if (productDetails.type === 'appliance') {
+        return new Appliance(productDetails);
+        }
 return new Product(productDetails);
 });
 */
