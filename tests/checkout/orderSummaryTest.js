@@ -6,10 +6,10 @@ describe('test suite: renderOrderSummary', () => {
     const productId1 = 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6';
     const productId2 = '15b6fc6f-327a-4ec4-896f-486349e85a3d';
 
-//done is a built-in function for Jasmine
-    beforeAll((done) => {
-        loadProductsFetch().then(() => {
-            done();
+//done is a built-in function for Jasmine - code before...beforeAll((done)) done goes in the parameter of the hook
+    beforeAll(async () => {
+        await loadProductsFetch().then(() => {
+            //done();
         });
     });
     //a hook to run before each test
