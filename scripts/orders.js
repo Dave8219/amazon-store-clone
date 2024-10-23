@@ -7,7 +7,7 @@ import {addToCart} from '../data/cart.js';
 
 
 
-       async function loadPage() {
+    async function loadPage() {
 
     await loadProductsFetch();
 let ordersHTML = '';
@@ -107,6 +107,18 @@ button.addEventListener('click', () => {
     
 addToCart(button.dataset.productId);
 updateProductQuantity(button);
+
+button.innerHTML = 'Added';
+
+setTimeout(() => {
+
+button.innerHTML = `
+<img class="buy-again-icon" src="images/icons/buy-again.png">
+          <span class="buy-again-message">Buy it again</span>
+`;
+
+}, 1000);
+
 
 });
     });
