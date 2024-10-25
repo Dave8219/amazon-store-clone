@@ -9,7 +9,34 @@ function renderProductsGrid() {
 
     let productsHTML = '';
 
-    products.forEach((product) => {
+
+const url = new URL(window.location.href);
+const search = url.searchParams.get('search');
+
+let filteredProducts = products;
+
+
+if (search) {
+    filteredProducts = products.filtered((product) => {
+//return product.name.includes(search); 
+
+let matchingKeyword = false;
+
+product.keywords.forEach((keyword) => {
+
+if (keyword.toLowerCase().includes(search.toLowerCase())) {
+matchingKeyword = true;
+}
+});
+
+return matchingKeyword || product.name.toLowerCase().includes(search.toLowerCase());
+
+    });
+}
+
+
+
+    filteredProducts.forEach((product) => {
     productsHTML += `
     <div class="product-container">
             <div class="product-image-container">
@@ -34,7 +61,7 @@ function renderProductsGrid() {
             </div>
 
             <div class="product-quantity-container">
-                <select>
+                <select class="js-quantity-selector-${product.id}">
                 <option selected value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -53,7 +80,7 @@ function renderProductsGrid() {
 
             <div class="product-spacer"></div>
 
-            <div class="added-to-cart">
+            <div class="added-to-cart js-added-to-cart">
                 <img src="images/icons/checkmark.png">
                 Added
             </div>
@@ -80,11 +107,51 @@ function renderProductsGrid() {
     updateCartQuantity();
 
 
-        document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+
+
+
+            document.querySelectorAll('.js-add-to-cart').forEach((button) => {
             button.addEventListener('click', () => {
             const productId = button.dataset.productId;
+
+
+            let matchingItem;
+            cart.forEach((item) => {
+              if (productId === item.productId) {
+                matchingItem = item;
+              }
+            });
+
+            const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
+            const quantity = Number(quantitySelector.value);
+
+            if (matchingItem) {
+            matchingItem.quantity += quantity - 1; 
+            }
+
+            else {
+                cart.push({
+                    productId: productId,
+                    quantity: quantity
+                });
+            }
+
             addToCart(productId);
-            updateCartQuantity();
-    });
-    });
+            updateCartQuantity(); 
+
+                });
+                });
+
+                
+
+                
+
+
+    document.querySelector('.js-search-button').addEventListener('click', () => {
+        const search = document.querySelector('.js-search-bar').value;
+        window.location.href = `amazon.html?search=${search}`;
+        
+        });
+        
+
 }

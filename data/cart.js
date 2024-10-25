@@ -32,6 +32,7 @@ export function addToCart(productId) {
     matchingItem = cartItem;
     }
     });
+
         if (matchingItem) {
         matchingItem.quantity += 1;
         } 
@@ -42,6 +43,8 @@ export function addToCart(productId) {
                 deliveryOptionId: '1'
             });
         }
+
+
 
         saveToStorage();
 }
