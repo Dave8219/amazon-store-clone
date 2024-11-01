@@ -1,0 +1,184 @@
+body {
+    background-color: #2F157A;
+    height: 2000px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 1px white;
+
+}
+
+
+.heading-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-heading {
+    display: flex;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    align-items: end;  
+}
+
+
+.nav-menu {
+    color: white;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+    height: 50px;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+
+.logo-image {
+    height: 115px;
+}
+
+
+.cover-image{
+    height: 575px;
+    width: 100vw;
+    border-radius: 4px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.image-container {
+    margin-top: 75px;
+    position: relative;
+}
+
+
+.text-box{
+    position: absolute;
+    width: 575px;
+    height: 375px;
+    z-index: 1;
+    top: 125px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background to make text stand out */
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+.read-more-button {
+    position: absolute;
+    color: white;
+    background-color: transparent;
+    padding: 8px 15px 8px 15px;
+    font-weight: 500;
+    z-index: 1;
+    bottom: 25px;
+    left: 20px;
+    font-size: 20px;
+    border: solid 2px white;
+    cursor: pointer;
+}
+
+.sub-heading-container {
+    position: absolute;
+    z-index: 1;
+    top: 45px; /* Adjust as needed */
+    left: 20px;
+}
+
+.heading-title {
+    color: white;
+    font-size: 35px;
+}
+
+.text-box-content {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.fields-title {
+    text-align: center;
+    color: white;
+}
+
+
+
+
+.fields-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    border-bottom: none;
+    border: solid 2px black;
+    border-radius: 8px; 
+    background-color: white;
+    height: 300px;
+    padding: 8px;
+}
+
+
+.fields-grid-container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    background-color: rgb(219, 219, 142);
+    border-top: none;
+    margin-top: -3px;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    border-radius: 8px; 
+    height: 300px;
+    padding: 8px;
+}
+
+
+
+.graphics-box {
+    border: solid 1px black;
+    border-radius: 4px;
+    
+}
+
+
+.box-header {
+    text-align: center;
+}
+
+
+.cart-quantity {
+    color: white;
+}
+
+
+.add-to-cart {
+    font-size: 20px;
+    font-style: oblique;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 6px 10px;
+    background-color: rgb(227, 241, 98);
+    border-radius: 8px;
+    border: solid 1px whitesmoke;
+    margin-top: 10px;
+    cursor: pointer;
+}

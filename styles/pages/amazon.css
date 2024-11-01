@@ -144,6 +144,14 @@
   opacity: 0;
 }
 
+
+/*added this class with the classList.add() method to the doc query selector*/
+.added-to-cart-visible {
+    opacity: 1;
+}
+
+
+
 .added-to-cart img {
   height: 20px;
   margin-right: 5px;
@@ -156,6 +164,3 @@
 }
 
 
-.added-to-cart-visible {
-    opacity: 1;
-}
