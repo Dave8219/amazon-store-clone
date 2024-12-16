@@ -43,6 +43,7 @@ return '';
 }
 
 
+//inheritance
 export class Clothing extends Product {
     sizeChartLink;
 

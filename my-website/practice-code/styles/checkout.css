@@ -1,0 +1,164 @@
+body {
+    height: 2000px;
+    padding-top: 200px;
+    
+}
+
+
+.header-container {
+    z-index: 1;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+}
+
+
+.logo-container {
+    display: flex;
+    flex: 1;
+}
+
+
+.middle-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.nav-container {
+    display: flex;
+    flex: 1;
+    
+}
+
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+
+
+.logo-image {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+}
+
+
+
+li {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+
+.border-color {
+    background-color: rgb(238, 220, 120);
+    z-index: 1;
+    height: 4px;
+    margin-top: 150px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+
+
+.call-title {
+    margin-top: 7px;
+}
+
+.search-input {
+    width: 200px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+
+.cart-icon-link {
+position: relative;
+}
+
+
+.cart-quantity {
+position: absolute;
+left: 50px;
+bottom: 70px;
+}
+
+
+.cart-logo {
+    width: 100px;
+    object-fit: contain;
+}
+
+
+
+.checkout-header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: solid 1px gray;
+    border-right: none;
+    border-left: none;
+}
+
+
+.cart-checkout {
+    height: 80px;
+    object-fit: contain;
+    margin-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.grand-total-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.delivery-option {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 10px; 
+}
+
+
+.delivery-option-input {
+    height: 18px;
+    margin-left: 125px;
+
+}
+
+
+.delivery-option-date {
+    justify-content: start;
+    font-size: 20px;
+    
+
+}
+
+
+

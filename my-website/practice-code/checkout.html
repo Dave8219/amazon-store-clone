@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Checkout Page
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="styles/checkout.css">
+
+<style>
+
+.checkout-container {
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    justify-content: center;
+    padding: 20px;
+    row-gap: 20px;
+}
+
+
+.fruit-images {
+    height: 200px;
+}
+
+.fruit-container {
+border: solid 1px rgb(209, 209, 209);
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+
+.fruit-details {
+    text-align: center;
+    border-right: solid 1px rgb(211, 211, 211);
+    
+}
+
+.fruit-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.shipping-info {
+    text-align: center;
+}
+
+
+.shipping-options {
+    text-align: start;
+    padding-left: 40px;
+}
+
+
+.total-container {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+</style>
+
+    </head>
+<body>
+
+
+    <div class="header-container">
+        <diV class="logo-container">
+            <a href="practice-code.html"><img class="logo-image" src="images/placeholder-name.png"></a>
+        </diV>
+        <div class="middle-container"><div class="call-title">Make a Call: (123) 456-7890</div>
+            <input class="search-input" type="text" placeholder="Search">
+        </div>
+        <div class="nav-container">
+        <ul class="nav-menu">
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+        <div class="cart-icon-link"><img class="cart-logo" src="images/shopping-cart-icon.jpg">
+        <div class="cart-quantity js-cart-quantity"></div>
+        </div>
+        </div>
+        </div>
+        
+        
+        <div class="border-color"></div>
+
+
+
+<div class="checkout-header-container">
+    <h2>Review Your Order</h2>
+    <img src="images/cart-checkout.jpg" class="cart-checkout">
+</div>
+
+<div class="checkout-container js-checkout-container">
+</div>
+<div class="total-container js-total-container"><h2></h2></div>
+
+
+<script type="module" src="scripts/checkout-page.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>

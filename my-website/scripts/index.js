@@ -1,17 +1,33 @@
-import {addToCart, cart} from '../data/cart.js';
+import {addToCart, cart, removeFromCart, saveToStorage} from '../data/cart.js';
 
 
 
 
 
-document.querySelector('.js-add-to-cart').addEventListener('click', () => {
+document.querySelectorAll('.js-add-to-cart').forEach((button) => {
 
-    addToCart();
-    });
-    
-    
+    button.addEventListener('click', () => {
+
+        addToCart();
+        });
+
+});
+
+
    export function updateCartQuantityDisplay() {
         document.querySelector('.js-cart-quantity').innerHTML = `Quantity: ${cart}`;
     
     }
+
+
+document.querySelector('.js-remove-from-cart').addEventListener('click', () => {
+removeFromCart();
+
+updateCartQuantityDisplay();
+    saveToStorage();
+});
         
+
+//document.querySelector('.js-input-text').innerHTML = 
+
+

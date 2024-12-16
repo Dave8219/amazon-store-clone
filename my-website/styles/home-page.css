@@ -166,12 +166,47 @@ li {
 }
 
 
+.product-container-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 20px;
+    column-gap: 20px;
+}
+
+
+.product-container {
+display: flex;
+flex-direction: column;
+}
+
 .cart-quantity {
     color: white;
 }
 
 
+.butterfly-transformed {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+input {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.input-text {
+    color:rgb(20, 20, 20);
+}
+
+
+input::placeholder {
+    color:#0b0b0c8c;
+}
+
 .add-to-cart {
+    width: 200px;
     font-size: 20px;
     font-style: oblique;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

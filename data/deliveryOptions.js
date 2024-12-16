@@ -63,9 +63,7 @@ deliveryOptions.forEach((option) => {
 found = true;
     }
 }); 
-
 return found;
-
 }
 
 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practice With Classes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+        height: 2000px;
+    }
+
+
+
+.banana-image {
+    height: 300px;
+}
+
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgb(105, 91, 80);
+    height: 300px;
+    width: 400px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+
+.fruits-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: auto;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+
+.my-fruits {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.produce {
+border: 2px black;
+height: 300px;
+}
+
+
+</style>
+
+</head>
+<body>
+
+
+<input type="text" placeholder="Search">
+
+
+
+<div class="calculator-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+
+<div class="fruit-container js-fruit-container">
+</div>
+
+<div class="fruits-container js-fruits-container">
+
+
+</div>
+
+<script type="module" src="practice-classes.js">
+</script>
+
+</body>
+</html>

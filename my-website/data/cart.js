@@ -7,6 +7,7 @@ loadFromStorage();
 updateCartQuantityDisplay();
 
 
+
 export function loadFromStorage() {
     cart = JSON.parse(localStorage.getItem('cart'));  
 }
@@ -26,3 +27,31 @@ updateCartQuantityDisplay();
 return cart;
 
 }
+
+
+export function removeFromCart() {
+    cart -= 1;
+    return cart;
+}
+
+
+
+
+/*function removeFromCart() {
+
+}
+
+
+
+function removeFromCart(productId) {
+    const newCart = [];
+    
+    cart.forEach((cartItem) => {
+    if (cartItem.productId !== productId) {
+    newCart.push(cartItem);
+    }
+    });
+    cart = newCart;
+    saveToStorage();
+    }
+    */

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        This is a Practice Website
+    </title>  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta>
+
+
+<link rel="stylesheet" href="styles/general.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="header-container">
+<diV class="logo-container">
+    <img class="logo-image" src="images/placeholder-name.png">
+</diV>
+<div class="middle-container"><div class="call-title">Make a Call: (123) 456-7890</div>
+    <input class="search-input" type="text" placeholder="Search">
+</div>
+<div class="nav-container">
+<ul class="nav-menu">
+    <li>Home</li>
+    <li>Services</li>
+    <li>Contact</li>
+</ul>
+<a href="checkout.html" target="_blank"><div class="cart-icon-link"><img class="cart-logo" src="images/shopping-cart-icon.jpg"></a>
+<div class="cart-quantity js-cart-quantity"></div>
+</div>
+</div>
+</div>
+
+
+<div class="border-color"></div>
+
+
+
+<div class="cover-section">
+
+<div>
+<img class="business-woman" src="images/business-woman.jpg">
+</div>
+
+<div>
+    <h1>This is a Title</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+        <br><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+    </p>
+    <a href="#submit-link"><button class="learn-more-button">Learn More</button></a>
+    <div class="icons-list"><img class="social-media-icons" src="images/facebook-icon.jpg">
+    <img class="social-media-icons-1" src="images/instagram-icon.jpg">
+    </div>
+</div>
+</div>
+
+
+
+
+<h2>Multiplication Table</h2>
+<p class="js-multiplication-table"></p>
+
+
+<h2>Vegetables</h2>
+<div>
+    <p class="js-vegetables-array"></p>
+</div>
+
+
+<h2>Fruits</h2>
+<div class="fruits-container js-fruits-container"></div>
+
+<p class="fruits-quantity js-fruits-quantity"></p>
+
+
+<p class="js-total-quantity"></p>
+
+
+
+<div class="image-container">
+    <img class="nature-image" src="images/nature-background.jpg">
+    <div class="login-container">
+        <div><h1 class="login-title">Login</h1></div>
+        <div class="email-div"><label for="email-input" class="email-title">Email</label>
+            
+            <input type="email" placeholder="Enter Email"></div>
+        <div class="password-div"><label for="password-input" class="password-title">Password</label>
+            <input class="password-input" type="password" placeholder="********"></div>
+        <div class="submit-button"><button id="submit-link" class="submit-button-1">Submit</button></div>
+    </div>
+</div>
+
+
+
+<div class="test-flex-container">
+    <div class="div-box">Div 1</div>
+    <div class="div-box">Div 2</div>
+    <div class="div-box">Div 3</div>
+</div>
+
+
+<div class="shadow-box">This is a Shadow Box</div>
+
+
+<div class="footer-container">
+<div class="footer-nav-menu">
+    <ul class="footer-cat">
+        <li>Home</li>
+        <li>Services</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+</div>
+
+<div class="agreements-container">
+    <ul class="policies-nav">
+        <li>Privacy Policy</li>
+        <li>Agreement</li>
+    </ul>
+</div>
+<div class="logo-icon"><img class="logo-no-background" src="images/logo-no-background.png"></div>
+<div class="contact-box">Contact Info</div>
+</div>
+
+
+
+
+<script>
+   
+    /*function addToCart(productId) {
+    let matchingItem;
+    cart.forEach((cartItem) => {
+    if (productId === cartItem.productId) {
+    matchingItem = cartItem;
+    }
+    });
+
+        if (matchingItem) {
+        matchingItem.quantity += 1;
+        } 
+        else {
+            cart.push({
+                productId: productId,
+                quantity: 1,
+                deliveryOptionId: '1'
+            });
+        }
+}*/
+
+
+
+//this outputs only even numbers in the array
+const numbers = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+];
+numbers.forEach((number) => {
+if (number % 2 === 0) {
+console.log(number);
+}
+});
+
+
+
+
+
+
+const vegetables = [
+'brocolli',
+'green beans',
+'spinach',
+'beans'
+];
+
+
+console.log(vegetables);
+console.log(vegetables[1]);
+console.log(vegetables.length);
+
+console.log('HELLO'.toLowerCase());
+console.log('hello'.toUpperCase());
+
+
+document.querySelector('.js-vegetables-array').innerHTML = vegetables;
+
+
+
+
+
+</script>
+
+<script type="module" src="scripts/practice.js"></script>
+
+
+<script type="module" src="scripts/misc.js"></script>
+
+</body>
+
+
+</html>
