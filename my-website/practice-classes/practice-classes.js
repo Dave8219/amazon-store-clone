@@ -115,3 +115,59 @@ document.querySelector('.js-fruits-container').innerHTML = renderFruits;
 
 
 
+
+
+
+let calculation = localStorage.getItem('calculation' || '');
+myCal();
+
+function updateCalculation(value) {
+    calculation += value;
+    myCal();
+    localStorage.setItem('calculation', calculation);
+}
+
+
+function myCal() {
+    document.querySelector('.js-cal').innerHTML = calculation;
+}
+
+
+
+function clearCalculation() {
+
+calculation = '';
+myCal();
+localStorage.removeItem('calculation');
+
+}
+
+
+
+
+function evaluateCalculation() {
+    try {
+        calculation = eval(calculation).toString();
+        myCal();
+        localStorage.setItem('calculation', calculation);
+    }
+
+    catch {
+        calculation = 'Error';
+        myCal();
+    }
+}
+
+
+
+document.querySelectorAll('.js-button').forEach((button) => {
+    button.addEventListener('click', () => {
+updateCalculation(button.innerText);
+    });
+});
+
+
+//in event listeners, you don't need () when calling a function. 
+document.querySelector('.js-clear').addEventListener('click', clearCalculation);
+
+document.querySelector('.js-equals').addEventListener('click', evaluateCalculation);
