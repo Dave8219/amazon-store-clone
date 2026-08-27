@@ -17,7 +17,7 @@ let filteredProducts = products;
 
 
 if (search) {
-    filteredProducts = products.filtered((product) => {
+    filteredProducts = products.filter((product) => {
 //return product.name.includes(search); 
 
 let matchingKeyword = false;
@@ -33,7 +33,6 @@ return matchingKeyword || product.name.toLowerCase().includes(search.toLowerCase
 
     });
 }
-
 
 
     filteredProducts.forEach((product) => {
@@ -116,7 +115,6 @@ const addedMessageTimeouts = {};
             button.addEventListener('click', () => {
             const productId = button.dataset.productId;
 
-
             let matchingItem;
             cart.forEach((item) => {
               if (productId === item.productId) {
@@ -159,11 +157,7 @@ addedMessageTimeouts[productId] = timeoutId;
                 });
                 });
 
-                
-
-                
-
-
+            
     document.querySelector('.js-search-button').addEventListener('click', () => {
         const search = document.querySelector('.js-search-bar').value;
         window.location.href = `amazon.html?search=${search}`;
