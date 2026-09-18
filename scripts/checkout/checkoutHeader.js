@@ -10,8 +10,8 @@ export function renderCheckoutHeader() {
       <div class="header-content">
         <div class="checkout-header-left-section">
           <a href="index.html">
-            <img class="amazon-logo" src="images/amazon-logo.png">
-            <img class="amazon-mobile-logo" src="images/amazon-mobile-logo.png">
+            <img class="main-logo" src="images/generic-logo.jpeg">
+            <img class="main-mobile-logo" src="images/generic-logo.jpeg">
           </a>
         </div>
 

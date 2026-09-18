@@ -26,12 +26,15 @@
   width: 150px;
 }
 
-.amazon-logo {
+.main-logo {
   width: 100px;
-  margin-top: 12px;
+  height: 70px;
+  object-fit: contain;
+  margin-top: 18px;
+  border-radius: 25px;
 }
 
-.amazon-mobile-logo {
+.main-mobile-logo {
   display: none;
 }
 
@@ -44,11 +47,11 @@
     width: auto;
   }
 
-  .amazon-logo {
+  .main-logo {
     display: none;
   }
 
-  .amazon-mobile-logo {
+  .main-mobile-logo {
     display: inline-block;
     height: 35px;
     margin-top: 5px;
